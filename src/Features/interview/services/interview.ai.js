@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 const api = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: "https://careerlens-backend-eshika.onrender.com",
     withCredentials:true,
 })
 
@@ -22,7 +22,7 @@ export const generateInterviewReport =async ({jobDescription , selfDescription ,
 }
 
 export const getInterviewReportById = async (interviewId) =>{
-    const response = await api.get('/api/interview/report/${interviewId}')
+    const response = await api.get(`/api/interview/report/${interviewId}`)
 
         return response.data
     
