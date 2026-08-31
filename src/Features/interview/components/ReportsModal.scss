@@ -1,0 +1,229 @@
+// ==========================================
+// Reports Modal Styling (Glassmorphism + Dark/Light Theme)
+// ==========================================
+
+.reports-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: fadeIn 0.25s ease;
+}
+
+.reports-modal-card {
+    width: 100%;
+    max-width: 720px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--glass-card-bg);
+    border: 1px solid var(--glass-card-border);
+    border-radius: 1.25rem;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.75rem;
+        border-bottom: 1px solid var(--glass-card-border);
+        background: rgba(124, 58, 237, 0.04);
+
+        .title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+
+            h2 {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: var(--text-primary);
+            }
+
+            .report-count {
+                font-size: 0.75rem;
+                font-weight: 700;
+                padding: 0.15rem 0.55rem;
+                border-radius: 100px;
+                background: rgba(124, 58, 237, 0.15);
+                color: #7c3aed;
+            }
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            .back-home-modal-btn {
+                padding: 0.35rem 0.8rem;
+                background: rgba(124, 58, 237, 0.1);
+                border: 1px solid rgba(124, 58, 237, 0.3);
+                border-radius: 8px;
+                color: #7c3aed;
+                font-size: 0.8rem;
+                font-weight: 600;
+                font-family: inherit;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background: rgba(124, 58, 237, 0.2);
+                    border-color: rgba(124, 58, 237, 0.6);
+                    transform: translateY(-1px);
+                }
+            }
+        }
+
+        .close-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--glass-card-border);
+            background: transparent;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background: rgba(239, 68, 68, 0.12);
+                border-color: rgba(239, 68, 68, 0.3);
+                color: #ef4444;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 1.25rem 1.5rem;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgba(124, 58, 237, 0.25);
+            border-radius: 4px;
+        }
+
+        .loading-state, .empty-state, .error-state {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+
+            .empty-icon {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+                color: var(--text-primary);
+            }
+        }
+
+        .reports-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .report-item-card {
+            display: flex;
+            align-items: center;
+            gap: 1.15rem;
+            padding: 1.1rem 1.25rem;
+            background: var(--input-bg);
+            border: 1px solid var(--glass-card-border);
+            border-radius: 0.85rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+
+            &:hover {
+                border-color: rgba(124, 58, 237, 0.4);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.2);
+
+                .view-arrow {
+                    color: #7c3aed;
+                    transform: translateX(3px);
+                }
+            }
+
+            .item-score-badge {
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                border: 3px solid #69db7c;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+
+                span {
+                    font-size: 0.95rem;
+                    font-weight: 800;
+                    line-height: 1;
+                }
+
+                small {
+                    font-size: 0.55rem;
+                    text-transform: uppercase;
+                    opacity: 0.8;
+                    margin-top: 1px;
+                }
+            }
+
+            .item-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.35rem;
+
+                .job-snippet {
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    color: var(--text-primary);
+                    line-height: 1.4;
+                }
+
+                .item-meta {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.6rem;
+                    font-size: 0.78rem;
+                    color: var(--text-muted);
+                    flex-wrap: wrap;
+                }
+            }
+
+            .item-action {
+                .view-arrow {
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    color: var(--text-muted);
+                    transition: all 0.25s ease;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+}
