@@ -52,7 +52,7 @@ The goal of CareerLens AI is to provide an intelligent, personalized platform th
 
 ## 🚀 Live Demo
 
-[View CareerLens AI](https://career-lens-frontend-pink.vercel.app/login)
+[View CareerLens AI](https://career-lens-frontend-pink.vercel.app/)
 
 ## 👨‍💻 Author
 
