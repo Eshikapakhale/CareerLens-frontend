@@ -1,16 +1,61 @@
-# React + Vite
+# CareerLens AI 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### AI-Powered Job Preparation & Career Assistant
 
-Currently, two official plugins are available:
+CareerLens AI is a Full Stack GenAI web application that helps job seekers analyze their resumes, understand job requirements, identify skill gaps, and prepare for interviews using AI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Features
 
-## React Compiler
+* 🔐 Secure user authentication with JWT
+* 📄 Resume upload and processing
+* 🎯 Job Description analysis
+* 🧠 AI-powered skill gap detection
+* 💬 Personalized interview question generation
+* 📊 Resume and job requirement analysis
+* 📑 ATS-optimized resume generation
+* 🤖 Gemini AI integration
+* ⚙️ REST API-based backend
+* 🚀 Production deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+**Frontend**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js
+* JavaScript
+* HTML
+* CSS
+
+**Backend**
+
+* Node.js
+* Express.js
+* REST APIs
+* JWT Authentication
+
+**AI & Processing**
+
+* Google Gemini AI
+* Puppeteer
+
+**Database**
+
+* MongoDB
+
+## 🔄 Application Workflow
+
+User → Authentication → Resume Upload → Job Description Analysis → Skill Gap Detection → AI Interview Preparation → ATS Resume Generation
+
+## 🎯 Purpose
+
+The goal of CareerLens AI is to provide an intelligent, personalized platform that helps job seekers understand their strengths and weaknesses and prepare effectively for their target roles.
+
+## 🚀 Live Demo
+
+[View CareerLens AI](https://career-lens-frontend-pink.vercel.app/login)
+
+## 👨‍💻 Author
+
+Eshika Pakhale
+
+Master of Computer Applications (MCA)
